@@ -87,6 +87,12 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/http-client": {
+        "version": "v6.1.0"
+    },
+    "symfony/http-client-contracts": {
+        "version": "v3.1.0"
+    },
     "symfony/http-foundation": {
         "version": "v6.1.0"
     },
@@ -159,6 +165,15 @@
     },
     "symfony/service-contracts": {
         "version": "v3.1.0"
+    },
+    "symfony/slack-notifier": {
+        "version": "6.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "5.2",
+            "ref": "192bc241a3095c6861353e5a7a652ad35659ca92"
+        }
     },
     "symfony/string": {
         "version": "v6.1.0"

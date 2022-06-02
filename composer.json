@@ -11,10 +11,11 @@
         "symfony/dotenv": "6.1.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "6.1.*",
+        "symfony/http-client": "6.1.*",
         "symfony/messenger": "6.1.*",
         "symfony/notifier": "6.1.*",
-        "symfony/phpunit-bridge": "^6.1",
         "symfony/runtime": "6.1.*",
+        "symfony/slack-notifier": "6.1.*",
         "symfony/yaml": "6.1.*"
     },
     "config": {
@@ -68,5 +69,8 @@
             "allow-contrib": false,
             "require": "6.1.*"
         }
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^6.1"
     }
 }

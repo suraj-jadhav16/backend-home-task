@@ -10,6 +10,9 @@ services:
 
 See .env for working credentials for RabbitMQ, MySQL and MailHog.
 
+A few notes:
+- By default, emails sent through Symfony Mailer will be sent to MailHog, regardless of recipient.
+
 ## How to use the Docker environment
 ### Starting the environment
 `docker-compose up`
@@ -21,5 +24,5 @@ See .env for working credentials for RabbitMQ, MySQL and MailHog.
 You can access the PHP environment's shell by executing `docker-compose exec php bash` (make sure the environment is up 
 and running before, or the command will fail) in root folder.
 
-We recommend that you always use the PHP container whenever you execute PHP, such as when installing and requiring new 
-composer dependencies.
+We recommend that you always use the PHP container's shell whenever you execute PHP, such as when installing and 
+requiring new composer dependencies.
