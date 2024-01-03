@@ -21,7 +21,7 @@ A few notes:
 `docker compose down`
 
 ### Running PHP based commands
-You can access the PHP environment's shell by executing `docker-compose exec php bash` (make sure the environment is up 
+You can access the PHP environment's shell by executing `docker compose exec php bash` (make sure the environment is up 
 and running before, or the command will fail) in root folder.
 
 We recommend that you always use the PHP container's shell whenever you execute PHP, such as when installing and 
