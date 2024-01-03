@@ -15,10 +15,10 @@ A few notes:
 
 ## How to use the Docker environment
 ### Starting the environment
-`docker-compose up`
+`docker compose up`
 
 ### Stopping the environment
-`docker-compose down`
+`docker compose down`
 
 ### Running PHP based commands
 You can access the PHP environment's shell by executing `docker-compose exec php bash` (make sure the environment is up 
