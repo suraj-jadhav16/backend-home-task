@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+file_operations:
+    path: /file/upload
+    controller: App\Controller\FileUploadController::uploadFiles

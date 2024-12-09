@@ -14,8 +14,8 @@ volumes:
 
 networks:
     default:
-        external:
-            name: backend
+        external: true
+        name: backend
     backend:
         driver: bridge
     frontend:

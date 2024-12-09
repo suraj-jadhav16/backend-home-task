@@ -1,17 +1,10 @@
-## Introduction
-This a base for Debricked's backend home task. It provides a Symfony skeleton and a Docker environment with a few handy 
-services:
-
-- RabbitMQ
-- MySQL (available locally at 3307, between Docker services at 3306)
-- MailHog (UI available locally at 8025)
-- PHP
-- Nginx (available locally at 8888, your API endpoints will accessible through here)
-
-See .env for working credentials for RabbitMQ, MySQL and MailHog.
-
-A few notes:
-- By default, emails sent through Symfony Mailer will be sent to MailHog, regardless of recipient.
+## Running app with Postman
+To upload multiple files using Postman to the http://localhost:8888/file/upload endpoint, follow these steps:
+    1. Open Postman and create a new POST request.
+    2. In the request URL, enter http://localhost:8888/file/upload and go to the Body tab and, the form-data option.
+    3. Enter key field as `files[]`, and change the type to 'File' and attach the files.
+        This endpoint accepts multiple files in a single request.
+    4. Click the Send button to submit the request and check for response.
 
 ## How to use the Docker environment
 ### Starting the environment
