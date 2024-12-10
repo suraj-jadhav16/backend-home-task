@@ -36,7 +36,7 @@ class EmailService
     {
         $email = (new Email())
             ->from($this->fromAddress)
-            ->to('your-email@example.com')
+            ->to($this->toAddress)
             ->subject($subject)
             ->html($htmlText);
 
