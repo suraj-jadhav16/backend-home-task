@@ -7,10 +7,11 @@ To upload multiple files using Postman to the http://localhost:8888/file/upload 
 #### 4. Click the Send button to submit the request and check for response.
 
 ## Database
+#### The database and tables will be created as soon as the app is launched
 #### Use `rule_engine` Database which contains `scan_status` table.
 
 ## Cron Job
-#### I have setup a cron job which runs every minute, so please expect the scan result/report email with 2 minutes.
+#### I have setup a cron job which runs every minute, so please expect the scan result/report email within 2 minutes.
 
 ## Mailbox
 #### Use `http://localhost:8025/` to monitor the mailbox for emails.
