@@ -6,13 +6,13 @@ To upload multiple files using Postman to the http://localhost:8888/file/upload 
         This endpoint accepts multiple files in a single request.
 #### 4. Click the Send button to submit the request and check for response.
 
-### Database
+## Database
 #### Use `rule_engine` Database which contains `scan_status` table.
 
-### Cron Job
+## Cron Job
 #### I have setup a cron job which runs every minute, so please expect the scan result/report email with 2 minutes.
 
-### Mailbox
+## Mailbox
 #### Use `http://localhost:8025/` to monitor the mailbox for emails.
 
 ## How to use the Docker environment
