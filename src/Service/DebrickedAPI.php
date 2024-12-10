@@ -55,7 +55,7 @@ class DebrickedAPI
                 return $data['token'];
             }
         } catch (Exception $e) {
-            return null;
+            throw new Exception('Unable to authenticate with Debricked API');
         }
 
         return null;

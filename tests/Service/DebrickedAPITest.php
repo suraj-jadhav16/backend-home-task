@@ -49,4 +49,24 @@ class DebrickedAPITest extends TestCase
         $token = $this->debrickedApi->getJwtToken();
         $this->assertNull($token);
     }
+
+    public function testStartScan()
+    {
+        $ciUploadId = '12345';
+        $repositoryName = 'abcd';
+        $jwtToken = 'asdfghjkl';
+
+        // Mock the response of the HTTP request for starting the scan
+        $mockResponse = $this->createMock(ResponseInterface::class);
+        $mockResponse->method('getStatusCode')->willReturn(200);
+        $mockResponse->method('toArray')->willReturn(['status' => 'success', 'response' => ['ciUploadId'=> $ciUploadId]]);
+
+        $this->httpClientMock->method('request')
+            ->willReturn($mockResponse);
+
+        $result = $this->debrickedApi->startScan($ciUploadId, $repositoryName, $jwtToken);
+
+        $this->assertArrayHasKey('status', $result[0]);
+        $this->assertEquals('success', $result[0]['status']);
+    }
 }

@@ -33,4 +33,6 @@ services:
     App\Service\ScanService: {}
     App\Command\CheckScanStatusCommand:
         tags: ['console.command']
+    Doctrine\ORM\EntityManagerInterface:
+        alias: 'doctrine.orm.entity_manager'
 

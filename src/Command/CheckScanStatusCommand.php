@@ -7,6 +7,7 @@ use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Doctrine\ORM\EntityManagerInterface;
 
 #[AsCommand(
     name: 'app:check-scan-status',
@@ -16,6 +17,7 @@ class CheckScanStatusCommand extends Command
 {
     protected static $defaultName = 'app:check-scan-status';
     private $scanService;
+    private $entityManager;
 
     /**
      * Constructor to initialize the ScanService service
@@ -24,10 +26,11 @@ class CheckScanStatusCommand extends Command
      * 
      * @return null
      */
-    public function __construct(ScanService $scanService)
+    public function __construct(ScanService $scanService, EntityManagerInterface $entityManager)
     {
         parent::__construct();
         $this->scanService = $scanService;
+        $this->entityManager = $entityManager;
     }
 
     /**
@@ -50,11 +53,7 @@ class CheckScanStatusCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $ciUploadId = $input->getArgument('ciUploadId');
-
-        $status = $this->scanService->checkScanStatus($ciUploadId);
-
-        return Command::SUCCESS;
+        return $this->scanService->checkScanStatus();
     }
 }
 
